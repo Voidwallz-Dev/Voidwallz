@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import FavouriteButton from '../ui/FavouriteButton'
 
 const FeaturedWallpapers = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -42,9 +43,12 @@ const FeaturedWallpapers = () => {
                   <div className="absolute inset-0 bg-black/90 flex flex-col items-center justify-center gap-4 z-10">
                     <div className="font-[Syne] font-bold text-[#F6EFD2] text-lg">{wallpaper.title}</div>
                     <div className="font-[Space_Mono] text-[#B03030] text-[9px]">{wallpaper.resolution}</div>
-                    <button className="font-[Space_Mono] text-[9px] uppercase border border-[#B03030] text-[#B03030] px-4 py-2 mt-2 hover:bg-[#B03030] hover:text-[#F6EFD2]">
-                      ↓ DOWNLOAD
-                    </button>
+                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
+                      <button className="font-[Space_Mono] text-[9px] uppercase border border-[#B03030] text-[#B03030] px-4 py-2 hover:bg-[#B03030] hover:text-[#F6EFD2]">
+                        ↓ DOWNLOAD
+                      </button>
+                      <FavouriteButton wallpaperId={wallpaper.id.toString()} size="sm" />
+                    </div>
                   </div>
                 )}
               </div>

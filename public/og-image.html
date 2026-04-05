@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>voidwallz OG Image</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      position: relative;
+      font-family: 'Syne', sans-serif;
+    }
+
+    /* Grid overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(176, 48, 48, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(176, 48, 48, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* Corner crosshairs */
+    .crosshair {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      color: #B03030;
+      font-family: monospace;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .crosshair.tl { top: 40px; left: 40px; }
+    .crosshair.tr { top: 40px; right: 40px; }
+    .crosshair.bl { bottom: 40px; left: 40px; }
+    .crosshair.br { bottom: 40px; right: 40px; }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 120px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .logo .void { color: #F6EFD2; }
+    .logo .wallz { color: #B03030; }
+
+    .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="crosshair tl">+</div>
+  <div class="crosshair tr">+</div>
+  <div class="crosshair bl">+</div>
+  <div class="crosshair br">+</div>
+
+  <div class="container">
+    <div class="logo">
+      <span class="void">void</span><span class="wallz">wallz</span>
+    </div>
+    <div class="tagline">WALLS FROM THE VOID</div>
+  </div>
+
+  <div class="footer">4K · FREE · DAILY DROPS</div>
+</body>
+</html>

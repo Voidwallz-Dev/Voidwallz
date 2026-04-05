@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Footer = () => {
   return (
     <footer className="bg-black border-t-2 border-[#B03030]">
@@ -5,9 +7,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Column 1 - Brand */}
           <div>
-            <div className="font-[Syne] font-extrabold text-2xl mb-4">
-              <span className="text-[#F6EFD2]">void</span>
-              <span className="text-[#B03030]">wallz</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.75rem' }}>
+              <img src="/logo1.png" alt="voidwallz" style={{ width: '32px', height: '32px' }} />
+              <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1.25rem' }}>
+                <span style={{ color: '#F6EFD2' }}>void</span>
+                <span style={{ color: '#B03030' }}>wallz</span>
+              </span>
             </div>
             <div className="font-[Space_Mono] text-[9px] uppercase text-zinc-600">
               WALLS FROM THE VOID
@@ -32,6 +37,15 @@ const Footer = () => {
               <a href="#" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
                 ABOUT
               </a>
+              <Link to="/brand" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
+                BRAND KIT
+              </Link>
+              <Link to="/terms" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
+                TERMS
+              </Link>
+              <Link to="/privacy" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
+                PRIVACY
+              </Link>
             </div>
           </div>
 
@@ -44,11 +58,11 @@ const Footer = () => {
               <a href="#" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
                 GITHUB
               </a>
-              <a href="#" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
+              <a href="https://x.com/voidwallz" target="_blank" rel="noopener noreferrer" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
                 TWITTER · X
               </a>
-              <a href="#" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
-                DISCORD
+              <a href="https://instagram.com/voidwallz" target="_blank" rel="noopener noreferrer" className="font-[Space_Mono] text-[13px] text-[#E2DDB4] hover:text-[#F6EFD2] transition-colors">
+                INSTAGRAM
               </a>
             </div>
           </div>
